@@ -1,0 +1,80 @@
+\documentclass[uplatex,dvipdfmx,11pt]{jsarticle}
+
+% ---------------- パッケージ ----------------
+\usepackage{amsmath,amssymb,physics}
+\usepackage{newtxtext,newtxmath}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=30mm}
+
+% ---------------- デザイン変更 ----------------
+\definecolor{mintgreen}{rgb}{0.7, 0.9, 0.7}
+\definecolor{deepblue}{rgb}{0.6,0.75,0.6}
+\definecolor{tea}{rgb}{0.6, 0.75, 0.6}  
+\titleformat{\section}{\Large\bfseries\color{mintgreen}}{\thesection}{1em}{}
+\renewcommand{\labelitemi}{$\\triangleright$}
+
+% ヘッダー装飾
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[L]{\textsc{ディラック関数と階段関数}}
+%\fancyhead[R]{2025.04.29}
+\pagestyle{empty}
+
+% ---------------- 本文 ----------------
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{デルタ関数と階段関数}} \\[1ex]
+  \rule{0.9\linewidth}{0.5pt}
+\end{center}
+
+以下のような関数を考える：
+
+\begin{equation}
+\theta(x) = 
+\begin{cases}
+  1 & (x > 0) \\\\
+  0 & (x < 0)
+\end{cases}
+\end{equation}
+
+この関数を \textbf{階段関数（Heaviside関数）} という。
+
+\vspace{1em}
+
+
+\begin{tcolorbox}[
+  colframe=green!50!black,
+  colback=green!5!white,
+  title=(b) $\theta'(x)$ の積分値
+]
+
+階段関数の微分 $\theta'(x) = \dv{\theta}{x}$ が
+\begin{equation} \tag{2}
+  \int_{-\infty}^{\infty} \theta'(x) \, dx = 1
+\end{equation}
+となることを示せ。
+\end{tcolorbox}
+
+\vspace{1em}
+
+\begin{tcolorbox}[
+  colframe=green!50!black,
+  colback=green!5!white,
+  title=(b) $\delta(x)$ と関数への作用
+]
+$\varepsilon$ を正の定数としたとき、
+\begin{equation} \tag{3}
+  \int_{-\varepsilon}^{\varepsilon} f(x) \theta'(x) \, dx = f(0)
+\end{equation}
+となることを示せ。
+\end{tcolorbox}
+
+\vspace{1em}
+
+
+\end{document}
